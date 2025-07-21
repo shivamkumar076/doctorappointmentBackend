@@ -27,9 +27,9 @@ app.use('/',require('./routes/payment'));
 mongoose.connect(process.env.MONGODB_URL).
 then(()=>{
     console.log("database connect successfully")
-    app.listen(port,()=>{
-        console.log(`App listen on ${port}`)
-    });
+    // app.listen(port,()=>{
+    //     console.log(`App listen on ${port}`)
+    // });
 }).catch((err)=>{
     console.error("database connection error",err);
 
