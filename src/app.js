@@ -1,6 +1,7 @@
 const express=require('express');
 const mongoose=require('mongoose');
 const cors=require('cors');
+const serverless = require('@vendia/serverless-express');
 require('dotenv').config();
 const port=process.env.PORT | 4000
 const app=express();
@@ -33,3 +34,4 @@ then(()=>{
     console.error("database connection error",err);
 
 })
+exports.handler = serverless({ app });
