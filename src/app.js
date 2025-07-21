@@ -8,7 +8,7 @@ const app=express();
 const cookieParser = require("cookie-parser");
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://doctorappointment-frontend-three.vercel.app/",
     
     credentials: true,
 }));
